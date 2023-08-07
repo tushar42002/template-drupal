@@ -1,0 +1,46 @@
+<div class="blogs-container container">
+	{% if title %}
+		<h3>{{ title }}</h3>
+
+	{% endif %}
+	<div class="blogs-box">
+		{% for row in rows %}
+
+			<div class="blog">
+				<div class="blog-img">
+
+					{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_image }}'] }}
+
+					<div class="byadmin">
+						<span>
+							<span class="icon profile-male"></span>
+							by
+							{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ uid }}'] }}
+						</span>
+					</div>
+
+				</div>
+
+				<div class="blog-content">
+					<h2>
+						{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}'] }}
+					</h2>
+					<div class="blog-tags">
+						<span class="text-dul-1">
+							0 Comments</span>
+						<span class="text-dul-1">
+							{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_tags }}'] }}</span>
+						<span class="text-dul-1">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ created }}'] }}</span>
+					</div>
+
+					<p class="pt-4 text-dul">
+						{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ body }}'] }}</p>
+
+				</div>
+
+			</div>
+		{% endfor %}
+	</div>
+
+
+</div>

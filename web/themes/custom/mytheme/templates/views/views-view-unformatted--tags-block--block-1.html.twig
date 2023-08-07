@@ -1,0 +1,16 @@
+{% if title %}
+	<h3>{{ title }}</h3>
+
+{% endif %}
+
+<div class="tags">
+
+	{% for row in rows %}
+
+
+		{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ name }}'] }}
+		
+
+
+	{% endfor %}
+</div>

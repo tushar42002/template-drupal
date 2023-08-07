@@ -1,0 +1,23 @@
+name: My Theme
+type: theme
+base theme: false
+description: custome theme
+package: other
+core_version_requirement: ^9 || ^10
+libraries:
+  - mytheme/global-styling
+regions:
+  header: Header
+  primary_menu: Primary menu
+  hero: Hero (full width)
+  page_title_hero: hero block for all pages other than home page
+  breadcrumb: Breadcrumb
+  content: Content
+  aside: aside for contact page
+  content2: Content2
+  footer_1: Footer 1
+  footer_2: Footer 2
+  footer_3: Footer 3
+  footer_4: Footer 4
+  footer_copyright: Footer copyright here
+  

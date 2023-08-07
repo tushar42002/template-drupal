@@ -1,0 +1,14 @@
+global-styling:
+  version: 1.x
+  js:
+    js/script.js: {}
+  css:
+    theme:
+      css/style.css: {}
+      css/about.css: {}
+      css/service.css: {}
+      css/contact.css: {}
+      css/blogs.css: {}
+      css/icon/all.min.css: {}
+
+  

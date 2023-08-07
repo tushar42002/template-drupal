@@ -1,0 +1,108 @@
+{# <article{{attributes}}>
+
+	{{ title_prefix }}
+	{% if label and not page %}
+		<h2{{title_attributes}}>
+			<a href="{{ url }}" rel="bookmark">{{ label }}</a>
+		</h2>
+	{% endif %}
+	{{ title_suffix }}
+
+	{% if display_submitted %}
+		<footer>
+			{{ author_picture }}
+			<div{{author_attributes}}>
+				{% trans %}Submitted by
+				{{ author_name }}
+				on
+				{{ date }}{% endtrans %}
+				{{ metadata }}
+			</div>
+		</footer>
+	{% endif %}
+
+	<div{{content_attributes}}>
+		{{ content }}
+
+         {{ dump(content) }}
+
+	</div>
+
+</article> #}
+
+
+<article>
+
+
+	<div class="single-blog-container">
+		<main>
+
+			<div class="blog-container">
+				<div class="blog">
+					<div class="blog-img">
+						{{  content.field_image}}
+						<div class="byadmin">
+							<span>
+								<span class="icon profile-male"></span>
+								by
+								{{ author_name }}
+							</span>
+						</div>
+					</div>
+
+					<div class="blog-content">
+						<h2>{{ label }}</h2>
+						<div class="blog-tags">
+							<span class="text-dul-1">
+								0 Comments</span>
+							<span class="text-dul-1">
+								{{ content.field_tags}}</span>
+							<span class="text-dul-1">
+								{{ date }}
+							</span>
+						</div>
+
+
+						{{ content.body }}
+
+
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="social py-5">
+				<a href="">
+					<i class="fa-brands fa-twitter"></i>
+				</a>
+				<a href="">
+					<i class="fa-brands fa-facebook"></i>
+				</a>
+				<a href="">
+					<i class="fa-brands fa-google-plus"></i>
+				</a>
+				<a href="">
+					<i class="fa-brands fa-linkedin"></i>
+				</a>
+				<a href="">
+					<i class="fa-brands fa-dribbble"></i>
+				</a>
+			</div>
+
+			<div class="form px-3">
+
+
+				<div class=" comment-form ">
+
+					{{ content.comment }}
+
+
+				</div>
+
+
+			</div>
+
+		</main>
+	</div>
+</article>

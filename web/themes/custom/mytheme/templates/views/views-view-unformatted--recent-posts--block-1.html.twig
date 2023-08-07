@@ -1,0 +1,24 @@
+
+	{% if title %}
+		<h3>{{ title }}</h3>
+
+	{% endif %}
+
+		{% for row in rows %}
+
+              <div class="post">
+                    <div class="post-img">
+                        {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_image }}'] }}
+                    </div>
+                    <div class="text">
+                        <p>{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}'] }}</p>
+                        <span>by {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ uid }}'] }}</span>
+                    </div>
+
+                </div>
+
+
+
+		{% endfor %}
+
+
