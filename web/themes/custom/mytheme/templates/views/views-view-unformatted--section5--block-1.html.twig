@@ -1,0 +1,63 @@
+<section>
+
+	{% for row in rows %}
+
+
+		<div class="s5-allcontainer">
+			<div class="s5-container">
+				<div class="s5-heading">
+					<h1>
+						{{ row.content.field_name[0] }}
+					</h1>
+				</div>
+			</div>
+			<div class="s5-container2">
+				<div class="s5-cards">
+					<div>
+						<span class="icon">
+							{{ row.content.field_icon1[0]}}
+						</span>
+					</div>
+					<h4>
+						{{ row.content.field_number_text[0] }}
+					</h4>
+					<div class="pb-5">
+						{{ row.content.field_text1[0] }}
+					</div>
+				<div>
+					<a class="read-more-btn" href={{row.content.field_btn[0]['#url'] }}>{{row.content.field_btn[0]['#title'] }}</a>
+				</div>
+			</div>
+			<div class="s5-cards">
+				<div>
+					<span class="icon">{{ row.content.field_icon2[0] }}</span>
+				</div>
+				<h4>
+					{{ row.content.field_number_text2[0] }}
+				</h4>
+				<div class="pb-5">
+					{{ row.content.field_text2[0] }}
+				</div>
+				<div>
+					<a class="read-more-btn" href={{row.content.field_btn2[0]['#url'] }}>{{row.content.field_btn2[0]['#title'] }}</a>
+				</div>
+			</div>
+			<div class="s5-cards">
+				<div>
+					<span class="icon">{{ row.content.field_icon3[0] }}</span>
+				</div>
+				<h4>
+					{{ row.content.field_number_text3[0] }}
+				</h4>
+				<div class="pb-5">
+					{{ row.content.field_text3[0] }}
+				</div>
+			
+			<div>
+				<a class="read-more-btn" href={{row.content.field_btn3[0]['#url'] }}>{{row.content.field_btn3[0]['#title'] }}</a>
+			</div>
+		</div>
+	</div>
+
+
+</div>{% endfor %}</section>

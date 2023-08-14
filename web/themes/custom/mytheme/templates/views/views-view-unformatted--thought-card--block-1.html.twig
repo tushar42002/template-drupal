@@ -1,0 +1,38 @@
+
+
+
+<div class="s11-container">
+    <div class="container ">
+       <div class="s9-heading">
+		  
+			<h2>{{ view.getTitle() }}</h2>
+
+		</div>
+
+        <div class="row row-cols-1 row-cols-md-3 px-5 g-4">
+
+		{% for row in rows %}
+            <div class="col-md-4">
+                <div class="card h-100 ">
+                    <img class="card-img-top" src={{file_url(row.content['#row']._entity.field_image.entity.fileuri)}} alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <img src="/sites/default/files/2023-08/29.png" alt="">
+                        </h5>
+                        <p class="card-text">
+                           	{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ body }}'] }}
+                        </p>
+                        <p class="name">
+                           {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_name }}'] }}
+                        </p>
+                        <p>
+                            <span>	{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_post }}'] }}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}  
+           
+        </div>
+    </div>
+</div>

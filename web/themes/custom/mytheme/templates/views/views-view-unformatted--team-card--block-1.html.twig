@@ -1,0 +1,40 @@
+<section>
+
+	<div class="s9-container">
+		<div class="s9-heading">
+		  
+			<h2>{{ view.getTitle() }}</h2>
+
+		</div>
+		<div class="s9-cards">
+
+			{% for row in rows %}
+
+
+				<div class="s9-card">
+
+					<img src={{file_url(row.content['#row']._entity.field_image.entity.fileuri)}} alt="">
+					
+					<div class="detail">
+						<h4 class="mb-0">
+							{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_name }}'] }}
+						</h4>
+						<p class="pt-1 mb-2">
+							<span>
+								{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_post }}'] }}
+							</span>
+						</p>
+						<p class="py-1">
+							{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ body }}'] }}
+						</p>
+						<div class="social">
+							&nbsp;
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+
+	</div>
+
+</section>

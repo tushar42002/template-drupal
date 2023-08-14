@@ -83,6 +83,7 @@
 
 .image img {
     width: 100%;
+    height: auto;
 }
 
 
@@ -136,7 +137,8 @@
 }
 
 .client-list li a img {
-    width: 100%;
+    width: 100% !important;
+    height: auto !important;
 }
 
 @media (max-width: 440px) {
@@ -148,7 +150,7 @@
     }
 
     .client-list li {
-        width: 12%;
+        width: 12% !important;
         padding-right: 10px;
         min-width: 60px;
     }

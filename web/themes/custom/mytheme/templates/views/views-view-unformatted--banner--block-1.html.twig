@@ -1,0 +1,24 @@
+<section>
+
+	<div class="s10-container">
+		{% for row in rows %}
+			<h2>
+				{{ row.content.field_name[0] }}
+			</h2>
+			<p class="text-dul">
+				{{ row.content.body[0] }}
+			</p>
+			<div class="s10-btns">
+				<div class="btn">
+					<a class="order-now" href={{row.content.field_btn[0]['#url'] }}>{{row.content.field_btn[0]['#title'] }}</a>
+				</div>
+				<div class="btn">
+					<a href={{row.content.field_btn2[0]['#url'] }}>{{row.content.field_btn2[0]['#title'] }}</a>
+				</div>
+			</div>
+
+		{% endfor %}
+	</div>
+
+
+</section>

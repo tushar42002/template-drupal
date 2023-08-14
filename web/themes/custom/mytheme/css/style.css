@@ -87,7 +87,6 @@ body {
 
 .header-item1 {
     height: 620px !important;
-
 }
 
 .carousel {
@@ -134,6 +133,12 @@ body {
     opacity: 1 !important;
 }
 
+.carousel-item img{
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+}
+
 .header-item2 {
     display: grid;
     position: relative;
@@ -166,6 +171,10 @@ body {
 
 .header-item2 .items p {
     font-size: 14px;
+}
+
+.header-item2 .items .icon p {
+    font-size: 50px;
 }
 
 
@@ -214,6 +223,7 @@ body {
 
 .s2-container .image img {
     width: 100%;
+    height: auto !important;
 }
 
 .s2-container .card {
@@ -238,11 +248,9 @@ body {
 
 }
 
-.s2-cards .card-box .icon {
+.s2-cards .card-box .icon p{
     padding-left: 0;
-}
-
-.s2-cards .card-box .icon::before {
+    font-family: 'Pe-icon-7-stroke';
     font-size: 30px;
 }
 
@@ -323,27 +331,17 @@ body {
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-    font-size: 0px;
     padding: 20px;
-
 }
 
 
 
-.icon::before {
-    content: "\e634";
-    width: 20px;
-    height: 20px;
-    font-size: 50px;
-}
 
-.icon p {
-    display: none;
-    font-size: 0px;
-    padding: 0;
+
+.icon p{
     margin: 0;
+    font-size: 60px;
 }
-
 
 .monitor::before {
     content: "\e634";
@@ -457,15 +455,23 @@ body {
     border-bottom: 2px solid #ebebeb;
 }
 
-.s3-container .items p {
+.s3-container .items .text p {
     padding-top: 10px;
     font-size: 14px;
     color: #727272;
+    margin: 0;
 }
 
 .s3-container .items .icon {
-    padding-top: 0px;
+    padding: 0px;
+    
+}
+
+.s3-container .items .icon p{
     color: #4064d7;
+    font-family: 'Pe-icon-7-stroke';
+    font-size: 50px;
+    padding: 0 35px 35px 35px;
 }
 
 
@@ -615,6 +621,7 @@ body {
 
 .s5-cards .icon {
     color: #4064d7;
+    font-family: 'Pe-icon-7-stroke';
 }
 
 .s5-cards h4 {
@@ -871,6 +878,7 @@ ul {
 .s7-container .image img {
     width: 100%;
     margin-right: 30px;
+    height: auto !important;
 }
 
 .s7-container .s7-detail {
@@ -957,12 +965,14 @@ ul {
 
 .s8-heading h2 {
     font-size: 40px;
-    line-height: 1.5;
+    line-height: 1.2;
+    max-width: 700px;
 }
 
 .s8-heading p {
-    padding: 20px 0;
+    padding: 10px 0;
     color: #727272;
+    max-width: 880px;
 }
 
 .s8-box {
@@ -984,9 +994,11 @@ ul {
     padding: 40px;
     border: 1px solid #727272;
     border-radius: 50%;
+    font-size: 22px;
+    font-family: 'Pe-icon-7-stroke';
 }
 
-.s8-box .box-item .icon::before {
+.s8-box .box-item .icon p {
     font-size: 22px;
 }
 
@@ -1021,10 +1033,7 @@ ul {
 
     .s8-box .box-item .icon {
         padding: 40px;
-    }
-
-
-    .s8-box .box-item .icon::before {
+        font-family: 'Pe-icon-7-stroke';
         font-size: 22px;
     }
 
@@ -1061,10 +1070,16 @@ ul {
     text-align: center;
 }
 
-.s9-container h2 {
+.s9-heading{
+    display: inline-block;
+    text-align: center;
+}
+
+.s9-heading h2 {
     padding-bottom: 100px;
     font-weight: 300;
     font-size: 40px;
+    max-width: 700px;
 }
 
 .s9-cards {
@@ -1109,7 +1124,6 @@ ul {
 }
 
 .s9-card .detail p {
-    padding: 10px 0;
     font-size: 14px;
     opacity: 0.6;
 }
@@ -1179,9 +1193,9 @@ ul {
     background-image: url(../img/pattren25.jpg);
 }
 
-.s11-container h2 {
+/* .s11-container h2 {
     padding: 30px 0 100px;
-}
+} */
 
 .s11-container .card {
     padding: 60px;

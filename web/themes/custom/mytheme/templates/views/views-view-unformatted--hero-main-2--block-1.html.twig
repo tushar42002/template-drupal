@@ -1,0 +1,23 @@
+<section>
+
+	<div class="container header-item2">
+
+		{% for row in rows %}
+
+			<div class="items">
+				<div>
+					<span class="icon">{{ row.content.field_icon1[0]}}</span>
+				</div>
+				<h4>
+					{{ row.content.field_name[0] }}
+				</h4>
+				<p>
+					{{ row.content.body[0] }}
+				</p>
+			</div>
+
+
+		{% endfor %}
+	</div>
+
+</section>

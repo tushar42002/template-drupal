@@ -1,0 +1,67 @@
+<section>
+
+	{% for row in rows %}
+
+		<div class="s8-container">
+			<div class="s8-bg">
+				<div class="container">
+					<div class="s8-heading">
+						<h2>
+							{{ row.content.field_name[0] }}
+						</h2>
+							{{ row.content.body[0] }}
+					</div>
+					<div class="s8-box">
+						<div class="box-item">
+							<div>
+								<span class="icon">{{ row.content.field_icon1[0]}}</span>
+							</div>
+							<p class="number">
+								{{ row.content.field_number_text[0] }}
+							</p>
+							<p>
+								<span class="text">projects</span>
+							</p>
+						</div>
+						<div class="box-item">
+							<div>
+								<span class="icon">{{ row.content.field_icon2[0] }}</span>
+							</div>
+							<p class="number">
+								{{ row.content.field_number_text2[0] }}
+							</p>
+							<p>
+								<span class="text">completed</span>
+							</p>
+						</div>
+						<div class="box-item">
+							<div>
+								<span class="icon">{{ row.content.field_icon3[0] }}</span>
+							</div>
+							<p class="number">
+								{{ row.content.field_number_text3[0] }}
+							</p>
+							<p>
+								<span class="text">happy clients</span>
+							</p>
+						</div>
+						<div class="box-item">
+							<div>
+								<span class="icon">{{ row.content.field_icon4[0] }}</span>
+							</div>
+							<p class="number">
+								{{ row.content.field_number_text4[0] }}
+							</p>
+							<p>
+								<span class="text">awards</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	{% endfor %}
+
+</section>

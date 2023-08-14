@@ -1,0 +1,49 @@
+<section>
+
+	{% for row in rows %}
+
+		<div class="s2-container">
+			<div class="image">
+				{{row.content.field_image}} 
+			</div>
+			<div class="card">
+				<h2>
+					{{ row.content.field_name[0] }}
+				</h2>
+				<p>
+                  {{ row.content.body[0] }}
+				</p>
+				<div class="s2-cards">
+					<div class="card-box">
+						<div>
+							<span class="icon">
+							   {{ row.content.field_icon1[0]}}
+							</span>
+						</div>
+						<h5>
+							{{ row.content.field_number_text[0]}}
+						</h5>
+						<p>
+							{{ row.content.field_text1[0]}}
+						</p>
+					</div>
+					<div class="card-box">
+						<div>
+							<span class="icon">
+							    {{ row.content.field_icon2[0]}}
+							</span>
+						</div>
+						<h5>
+							{{ row.content.field_number_text2[0]}}
+						</h5>
+						<p>
+							{{ row.content.field_text2[0]}}
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	{% endfor %}
+</section>

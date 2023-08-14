@@ -47,109 +47,102 @@
 #}
 
 <div id="page-wrapper" class="page-wrapper">
-  <div id="page">
+	<div id="page">
 
 
+		<div class="nav w-100 bg-transparent">
+			<nav class="navbar navbar-expand-lg navbar-dark">
+				<div class="container-fluid px-5">
+					{{ page.header }}
 
-     <div class="nav w-100 bg-transparent">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid px-5">
-                       {{ page.header }}
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                          {{ page.primary_menu }}
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
 
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div>
+					{{ page.primary_menu }}
 
-    {% if path('<current>') == '/home' %}
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>
 
-     <section>
-          {{page.hero}}
-      </section>
+{% if path('<current>') == '/home' %}
 
-      {% else %}
+	<section>
+		<div class="header-container">
+			<div class="header-items">
+				{{page.hero}}
+			</div>
+		</div>
+	</section>
 
-     <section>
+{% else %}
 
-
-     
-        <div class="header-container">
-
-            <div class="header-items">
-                <div class="page-heading">
-                    <div class="page-heading-container">
-                        <div class="text">
-                             {{page.page_title_hero}}
-                            <p>GET MANY MORE FEATURES</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
+	<section>
 
 
-         
-      </section>
+		<div class="header-container">
 
-      {% endif %}
+			<div class="header-items">
+				<div class="page-heading">
+					<div class="page-heading-container">
+						<div class="text">
+							{{page.page_title_hero}}
+							<p>GET MANY MORE FEATURES</p>
+						</div>
+					</div>
 
-   
+				</div>
+			</div>
 
-
-    {{page.breadcrumb}}
-
-    <main>
-
-      {{page.content}}
-
-      {{ page.content2 }}
-    </main>
-
-
-    <footer class="site-footer">
-      <div class="footer-container">
-       
-        <div class="footer1">
-        {{ page.footer_1 }}
-        </div>
-
-        <div class="footer2">
-        {{ page.footer_2 }}
-        </div>
-        
-        <div class="footer3">
-        {{ page.footer_3 }}
-        </div>
-
-        <div class="footer4">
-        {{ page.footer_4 }}
-        </div>
-        
-      </div>  
-       <div class="copyright p-4">
-           {{ page.footer_copyright }}
-        </div>
-    </footer>
+		</div>
 
 
+	</section>
+
+{% endif %}
 
 
-    {# {% if page.header or page.primary_menu or page.secondary_menu %}
-      <header id="header" class="site-header" data-drupal-selector="site-header" role="banner"> #}
+{{page.breadcrumb}}
 
-        {# Gets fixed by JavaScript at wide widths. #}
-        {# <div class="site-header__fixable" data-drupal-selector="site-header-fixable">
+<main>
+
+	{{page.content}}
+
+	{{ page.content2 }}
+</main>
+
+
+<footer class="site-footer">
+	<div class="footer-container">
+
+		<div class="footer1">
+			{{ page.footer_1 }}
+		</div>
+
+		<div class="footer2">
+			{{ page.footer_2 }}
+		</div>
+
+		<div class="footer3">
+			{{ page.footer_3 }}
+		</div>
+
+		<div class="footer4">
+			{{ page.footer_4 }}
+		</div>
+
+	</div>
+	<div class="copyright p-4">
+		{{ page.footer_copyright }}
+	</div>
+</footer>
+
+
+{# {% if page.header or page.primary_menu or page.secondary_menu %}
+      <header id="header" class="site-header" data-drupal-selector="site-header" role="banner"> #}{# Gets fixed by JavaScript at wide widths. #}
+{# <div class="site-header__fixable" data-drupal-selector="site-header-fixable">
           <div class="site-header__initial">
             <button class="sticky-header-toggle" data-drupal-selector="sticky-header-toggle" role="switch" aria-controls="site-header__inner" aria-label="{{ 'Sticky header'|t }}" aria-checked="false">
               <span class="sticky-header-toggle__icon">
@@ -160,8 +153,8 @@
             </button>
           </div> #}
 
-          {# Needs to extend full width so box shadow will also extend. #}
-          {# <div id="site-header__inner" class="site-header__inner" data-drupal-selector="site-header-inner">
+{# Needs to extend full width so box shadow will also extend. #}
+{# <div id="site-header__inner" class="site-header__inner" data-drupal-selector="site-header-inner">
             <div class="container site-header__inner__container">
 
               {{ page.header }}
@@ -183,9 +176,9 @@
           </div>
         </div>
       </header> #}
-    {# {% endif %} #}
+{# {% endif %} #}
 
-    {# <div id="main-wrapper" class="layout-main-wrapper layout-container">
+{# <div id="main-wrapper" class="layout-main-wrapper layout-container">
       <div id="main" class="layout-main">
         <div class="main-content">
           <a id="main-content" tabindex="-1"></a>
@@ -218,14 +211,11 @@
       </div>
     </div> #}
 
-    {# <footer class="site-footer">
+{# <footer class="site-footer">
       <div class="site-footer__inner container">
         {{ page.footer_top }}
         {{ page.footer_bottom }}
       </div>
     </footer> #}
 
-    {# <div class="overlay" data-drupal-selector="overlay"></div> #}
-
-  </div>
-</div>
+{# <div class="overlay" data-drupal-selector="overlay"></div> #}</div></div>

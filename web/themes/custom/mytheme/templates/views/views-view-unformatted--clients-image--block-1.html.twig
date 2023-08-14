@@ -1,0 +1,32 @@
+
+
+<section>
+    <div class="client-container">
+   
+        <ul class="client-list">
+
+		{% for row in rows %}
+
+			  <li>
+                <a href="">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_client_image1 }}'] }}</a>
+            </li>
+			  <li>
+                <a href="">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_client_image2 }}'] }}</a>
+            </li>
+			  <li>
+                <a href="">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_client_image3 }}'] }}</a>
+            </li>
+			  <li>
+                <a href="">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_client_image4 }}'] }}</a>
+            </li>
+			  <li>
+                <a href="">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_client_image5 }}'] }}</a>
+            </li>
+
+		{% endfor %}
+
+            
+
+        </ul>
+    </div>
+</section>

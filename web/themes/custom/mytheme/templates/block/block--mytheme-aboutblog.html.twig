@@ -1,0 +1,45 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    layout ? 'layout--' ~ layout|clean_class,
+  ]
+%}
+
+
+<div{{attributes.addClass(classes)}}>
+	{{ title_prefix }}
+	{% if label %}
+		<h2{{title_attributes.addClass('block__title')}}>{{ label }}</h2>
+	{% endif %}
+	{{ title_suffix }}
+
+	{% block content %}
+
+		<div class="about-container2">
+			<div class="about-post">			
+				<div class="post-text">
+					<h2>
+						{{content.field_name}}
+					</h2>
+					<div class="py-4">
+						{{content.field_text1}}
+					</div>
+					<div class="py-4 text-dul">
+						{{content.body}}
+					</div>
+					<div class="post-btn">
+						<a class="read-more-btn" href={{content.field_btn[0]['#url']}}>{{content.field_btn[0]['#title']}}</a>
+					</div>
+				</div>
+				<div class="image">
+					{{content.field_image}}
+				</div>
+			</div>
+		</div>
+
+
+	{% endblock %}
+
+</div>

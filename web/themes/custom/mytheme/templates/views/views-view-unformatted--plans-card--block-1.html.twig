@@ -1,0 +1,53 @@
+<section>
+
+    <div class="s6-container">
+            <div class="plans">
+                <span class="planbtn month-btn">monthly</span>
+                <span class="planbtn year-btn">yearly</span>
+            </div>
+
+            <div class="month-year-plan monthly-plan active">
+			{% for row in rows %}
+
+                <div class="plancard">
+                    <h3>{{ row.content.field_category[0]['#context']['value'] }}</h3>
+                    <div class="plan-price">
+                        <p class="price"><sup>$</sup>{{ row.content.field_cost1[0]}}</p>
+                        <span class="plan-d">/month</span>
+                    </div>
+                    <ul class="text-dul">
+                     {{ row.content.body[0]}}
+                    </ul>
+
+                    <a class="order-now" href={{row.content.field_btn[0]['#url'] }}>{{row.content.field_btn[0]['#title'] }}</a>
+
+                </div>
+                
+			{% endfor %}	
+            </div>
+
+            <div class="month-year-plan yearly-plan">
+			{% for row in rows %}
+                <div class="plancard">
+                    <h3>{{ row.content.field_category[0]['#context']['value']  }}</h3>
+                    <div class="plan-price">
+                        <p class="price"><sup>$</sup>{{ row.content.field_cost2[0] }}</p>
+                        <span class="plan-d">year</span>
+                    </div>
+                    <ul class="text-dul">
+                        {{ row.content.body[0] }}
+                    </ul>
+
+                  <a class="order-now" href={{row.content.field_btn[0]['#url'] }}>{{row.content.field_btn[0]['#title'] }}</a>
+
+                </div>
+                
+
+			{% endfor %}	
+            </div>
+        </div>
+
+
+
+
+</section>
